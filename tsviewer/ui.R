@@ -38,21 +38,34 @@ shinyUI(navbarPage(
                      ## render dynamic checkboxes
                      uiOutput("show_vars")
                  ),
-                 
-                 
-                 
-                 
-                 
                  mainPanel(fluidRow(
                      column(10,h3("Stock Price Table"),dataTableOutput("table")),
                      column(10,h3("Summary"),verbatimTextOutput("summary")),
-                     column(10,h3("Plot"),plotOutput("PlotG"))
-                     
-                 )
+                     column(10,h3("Plot"),plotOutput("PlotG"))))
                  
-                 )
-                 
-             ))
+             )), 
+    
+    tabPanel("Naive Method",
+                        sidebarLayout(
+                            sidebarPanel(
+                                
+                                'Naive Method Does not Need any Parameter.'
+                            ),
+                            
+                            mainPanel(
+                                fluidRow(
+                                    h3('Model Introduction'),
+                                    p('Naive forecasts are the most cost effective forecasting model. Generally, it just use the value of past to predict the near future',align='justify'),
+                                    
+                                    column(10,h4(strong('Forecasting Plot')),plotOutput("Plot0")),
+                                    
+                                    column(10,h4(strong('Accuracy Table')),tableOutput("accu0")),
+                                    
+                                    column(10,h4(strong('Accuracy Bar Plot')),plotOutput("Plot00"))
+                                )
+                            )
+                        ))
+    
     
     
     
