@@ -1,11 +1,6 @@
 library(shiny)
 library(shinythemes)
 
-Data1<-data.frame(read.csv("~/tsviewer/tsviewer/data/amazon.csv"))
-Data2<-data.frame(read.csv("~/tsviewer/tsviewer/data/facebook.csv"))
-Data3<-data.frame(read.csv("~/tsviewer/tsviewer/data/netflix.csv"))
-Data4<-data.frame(read.csv("~/tsviewer/tsviewer/data/google.csv"))
-
 
 shinyUI(navbarPage(
   theme = shinytheme("flatly"),
